@@ -1,1 +1,39 @@
-Bonus Hesapiniza eklendi!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy Listesi</title>
+</head>
+<body>
+    <h1>Proxy Listesi</h1>
+    <ul id="proxyList">
+        <!-- Proxyler buraya eklenecek -->
+    </ul>
+
+    <script>
+        async function fetchProxyList() {
+            try {
+                const response = await fetch('https://proxs.ru/freeproxy_3009e987d32772e.txt');
+                if (!response.ok) {
+                    throw new Error('Proxy listesi alınamadı.');
+                }
+                const data = await response.text();
+                const proxyList = data.trim().split('\n');
+                const listElement = document.getElementById('proxyList');
+
+                proxyList.forEach(proxy => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = proxy;
+                    listElement.appendChild(listItem);
+                });
+            } catch (error) {
+                console.error('Proxy listesi alınırken bir hata oluştu:', error);
+            }
+        }
+
+        // Sayfa yüklendiğinde proxy listesini çek
+        window.onload = fetchProxyList;
+    </script>
+</body>
+</html>
