@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link type="text/css" rel="stylesheet" href="css/styles.css" />
+  <script src="https://kit.fontawesome.com/308018aeb7.js"></script>
+  <title>jasper</title>
+  <link rel="icon" type="image/x-icon" href="images/yAdQH9D.png" />
+  <meta property="og:title" content="jasper" />
+  <meta name="description" content="Roses Are Red" />
+  <meta property="og:description" content="Roses Are Red" />
+  <meta property="og:image" content="images/yAdQH9D.png" />
+</head>
+
+<body>
+  <button id="enterButton">Click Anywhere</button>
+  <div class="typing-container">
+    <div id="typing" style="color: black;" class="typing-text"></div>
+    <div id="cursor" class="cursor"></div>
+    <div class="text-container">
+      <div>
+        <div>‎</div>
+        <div>‎</div>
+        <a href="kill">
+          <button style="border-radius: 40px; color: red;" class="btn-link" type="button">Member Page</button>
+        </a>
+        <a href="contact">
+          <button style="border-radius: 40px; color: red;" class="btn-link" type="button">Contact Us</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="main">
+    <div>
+      <a href="kill">
+        <button style="border-radius: 40px; color: red;" class="btn-link" type="button">fraud.gay</button>
+      </a>
+      <a href="contact">
+        <button style="border-radius: 40px; color: red;" class="btn-link" type="button">slurs.lol</button>
+      </a>
+    </div>
+    <div id="clock"></div>
+  </div>
+  <video id="video" src="Roses.mp4" playsinline loop></video>
+  <script src="js/main.js"></script>
+
+  <div class="snowflakes fade-in">
+    <div class="snowflake">†</div>
+    <div class="snowflake">†</div>
+    <div class="snowflake">†</div>
+    <div class="snowflake">†</div>
+    <div class="snowflake">†</div>
+    <div class="snowflake">†</div>
+    <div class="snowflake">†</div>
+    <div class="snowflake">†</div>
+    <div class="snowflake">†</div>
+    <div class="snowflake">†</div>
+    <div class="snowflake">†</div>
+  </div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const options = {
+        hour12: true,
+        hour: "numeric",
+        minute: "2-digit",
+        second: "2-digit",
+      };
+      const formattedTime = now.toLocaleTimeString("en-US", options);
+      document.getElementById("clock").textContent = formattedTime;
+    }
+
+    setInterval(updateClock, 1000);
+
+    $('img').attr('draggable', false);
+
+    document.onkeydown = function (e) {
+      if (event.keyCode == 123) {
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'i'.charCodeAt(0))) {
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && (e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'c'.charCodeAt(0))) {
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && (e.keyCode == 'J'.charCodeAt(0) || e.keyCode == 'j'.charCodeAt(0))) {
+        return false;
+      }
+      if (e.ctrlKey && (e.keyCode == 'U'.charCodeAt(0) || e.keyCode == 'u'.charCodeAt(0))) {
+        return false;
+      }
+      if (e.ctrlKey && (e.keyCode == 'S'.charCodeAt(0) || e.keyCode == 's'.charCodeAt(0))) {
+        return false;
+      }
+    }
+  </script>
+</body>
+
+</html>
